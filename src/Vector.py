@@ -18,6 +18,8 @@ class Vector:
         return Vector([a - b for a, b in zip(self.elements, second_vector.elements)])
 
     def multiply_vector(self, second_vector: 'Vector') -> 'Vector':
+
+
         if len(self.elements) != len(second_vector.elements):
             raise ValueError("Les vecteurs ont une taille différente")
 
@@ -115,7 +117,7 @@ def main():
 
     # Test du produit scalaire avec l'opérateur @
     print("\n--- Test produit scalaire ---")
-    scalaire = v3 @ v4  # équivaut à v3.scalar_product(v4)
+    scalaire = v3 @ v2 # équivaut à v3.scalar_product(v4)
     print("v3 @ v4 =", scalaire)
 
     print("\n--- Test __STR__ ---")
